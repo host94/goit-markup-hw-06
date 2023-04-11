@@ -1,4 +1,8 @@
 :root {
+
+
+
+  
   --baground-color-main: #ffffff;
   --main-color: #ffffff;
   /* Header color */
@@ -27,7 +31,7 @@
   --transition-background: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bakcground-color: background-color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-boxshadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  --transition-boxshadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transitio-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 p,
@@ -471,6 +475,66 @@ body {
   fill: #f4f4fd;
 }
 
+.form-sub-wraper {
+}
+.form-sub-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.form-sub-container {
+  display: flex;
+  gap: 24px;
+}
+.form-sub {
+}
+.form-sub-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  transition: var(--transition-color);
+}
+.form-sub-input:focus {
+  color: #ffffff;
+  outline: none;
+}
+.form-sub-input::placeholder {
+  padding: 16px;
+}
+.form-sub-btn {
+  width: 165px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: var(--transition-background);
+}
+.form-sub-btn:hover,
+.form-sub-btn:focus {
+  background: var(--hover-color-style);
+}
+.form-sub-btn-icon {
+  fill: #ffffff;
+}
 /* !!!!! PORTFOLIO !!!!! */
 .potrfolio-block {
   padding-top: 96px;
@@ -501,7 +565,7 @@ body {
   border: 1px solid var(--border-color-portf);
   border-radius: 4px;
   transition: var(--transition-color), var(--transition-bakcground-color),
-  var(--transition-boxshadow), var(--transitio-border-color);
+    var(--transition-boxshadow), var(--transitio-border-color);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -524,7 +588,7 @@ body {
   display: block;
   transition: var(--transition-boxshadow);
 }
-.portfolio-item:hover .portfolio-cover-text{
+.portfolio-item:hover .portfolio-cover-text {
   transform: translate(0);
 }
 .portfolio-cover-wrap {
@@ -534,19 +598,18 @@ body {
 .portfolio-cover-text {
   position: absolute;
   top: 0;
-  color: #F4F4FD;
+  color: #f4f4fd;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #F4F4FD;
-  background-color: #4D5AE5;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
   padding: 40px 32px;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
-  
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -597,9 +660,20 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms linear;
+  padding: 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+.modal-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-top: 48px;
+  margin-bottom: 16px;
 }
 .modal-close-btn {
   position: absolute;
@@ -628,3 +702,146 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+/* ---------- MODAL WINDOW ----------*/
+/* ---------- MODAL FORM ----------*/
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-field {
+  margin-bottom: 8px;
+}
+.modal-form-field-desk {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+}
+.modal-form-imput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  transition: var(--transitio-border-color);
+}
+.modal-form-imput:focus {
+  outline: none;
+  border-color: #4d5ae5;
+}
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: var(--transition-color);
+}
+.modal-form-input-desk {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+.modal-form-imput:focus + .modal-input-icon {
+  fill: #4d5ae5;
+}
+.modal-form-message {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  color: rgba(46, 47, 66, 0.4);
+  margin-top: 4px;
+  transition: var(--transition-color);
+}
+.modal-form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-message:focus {
+  outline: none;
+  border-color: #4d5ae5;
+  color: #000000;
+}
+.modal-form-check-desk {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+.modal-form-check-desk {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #757575;
+  transition: var(--transition-background);
+}
+.modal-form-check-desk::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.modal-form-check:checked + .modal-form-check-desk::before {
+  background: #404bbf;
+  border: 1.25px solid #404bbf;
+  border-radius: 2px;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.visually-hidden-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.modal-form-link-policy {
+  color: #4d5ae5;
+}
+.modal-form-btn {
+  width: 169px;
+  height: 56px;
+  background: var(--btn-back);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  color: var(--color-btn);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 32px 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  transition: var(--transition-background);
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background: var(--hover-color-style);
+}
+/* ---------- MODAL FORM ----------*/
