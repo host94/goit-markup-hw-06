@@ -1,8 +1,4 @@
 :root {
-
-
-
-  
   --baground-color-main: #ffffff;
   --main-color: #ffffff;
   /* Header color */
@@ -412,10 +408,10 @@ body {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
 }
 .footer-dis {
   max-width: 264px;
+  margin-right: 120px;
 }
 .footer-logo {
   font-weight: 800;
@@ -476,6 +472,7 @@ body {
 }
 
 .form-sub-wraper {
+  margin-left: auto;
 }
 .form-sub-text {
   font-weight: 500;
@@ -490,10 +487,13 @@ body {
   gap: 24px;
 }
 .form-sub {
+  display: flex;
+  gap: 24px;
 }
 .form-sub-input {
   width: 264px;
   height: 40px;
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -504,14 +504,10 @@ body {
   color: #ffffff;
   outline: none;
 }
-.form-sub-input::placeholder {
-  padding: 16px;
-}
 .form-sub-btn {
   width: 165px;
   height: 40px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -521,7 +517,6 @@ body {
   border: none;
   color: #ffffff;
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -650,7 +645,6 @@ body {
 }
 .modal {
   width: 408px;
-  min-height: 576px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -660,7 +654,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms linear;
-  padding: 24px;
+  padding: 72px 24px 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -672,7 +666,6 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-top: 48px;
   margin-bottom: 16px;
 }
 .modal-close-btn {
@@ -709,7 +702,7 @@ body {
   flex-direction: column;
 }
 .modal-form-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .modal-form-field-desk {
   display: block;
@@ -761,7 +754,7 @@ body {
   border-radius: 4px;
   color: rgba(46, 47, 66, 0.4);
   margin-top: 4px;
-  transition: var(--transition-color);
+  transition: var(--transitio-border-color);
 }
 .modal-form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -823,13 +816,9 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-family: inherit;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0.04em;
   color: var(--color-btn);
   cursor: pointer;
